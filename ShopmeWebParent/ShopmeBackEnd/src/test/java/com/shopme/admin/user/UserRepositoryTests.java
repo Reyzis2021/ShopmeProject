@@ -60,6 +60,14 @@ public class UserRepositoryTests {
     }
 
     @Test
+    public void testCountById() {
+        Integer id = 1;
+        Long countById = repo.countById(id);
+
+        assertThat(countById).isNotNull().isGreaterThan(0);
+    }
+
+    @Test
     public void testGetUserByEmail() {
         String email = "divideetimpera20182@gmail.com";
 
