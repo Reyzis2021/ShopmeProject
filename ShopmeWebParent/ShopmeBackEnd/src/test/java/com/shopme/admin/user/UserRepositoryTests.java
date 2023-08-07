@@ -88,6 +88,14 @@ public class UserRepositoryTests {
         repo.deleteById(id);
     }
 
+
+    @Test
+    public void testDisableUser() {
+        Integer id = 3;
+        repo.updateEnabledStatus(3, true);
+
+    }
+
     @Test
     public void testUpdateUserRole() {
         User userAnny = repo.findById(2).get();
